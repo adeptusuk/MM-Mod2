@@ -1,0 +1,33 @@
+function onLoad()
+  self.createButton({click_function = 'gameSetup',
+                            label = 'Setup Game',
+                            function_owner = self,
+                            position = {0,1,0},
+                            rotation = {0,0,0},
+                            width = 200,
+                            height = 200,
+                            font_size = 30})
+
+  goodsArray = {'0142e2','d42cd3','994237'}
+   merchantBag =     getObjectFromGUID("e4ebe4")
+   goodsBag =        getObjectFromGUID("b266fd")
+   shipModBag =      getObjectFromGUID("9c1043")
+
+   havanaShipMod =   getObjectFromGUID("417888")
+   havanaMerchant =  getObjectFromGUID("48d7fb")
+
+   nassauShipMod =   getObjectFromGUID("7274f8")
+   nassauMerchant =  getObjectFromGUID("dfeec5")
+
+   tortugaShipMod =  getObjectFromGUID("451740")
+   tortugaMerchant = getObjectFromGUID("663891")
+
+end
+
+function gameSetup()
+  goodsBag.shuffle()
+  for i=1,3 do
+    goodsSquare = getObjectFromGUID(goodsArray[i])
+    goodsBag.takeObject({position=goodsSquare.getPosition()})
+  end
+end
