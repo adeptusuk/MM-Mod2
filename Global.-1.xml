@@ -1,1 +1,26 @@
 <!-- Xml UI. See documentation: https://api.tabletopsimulator.com/ui/introUI/ -->
+<Panel
+   id="Navigation"
+   height="280"
+   width="270"
+   rectAlignment="MiddleRight"
+   offsetXY="0 0"
+   active="false"
+   color="rgba(0,0,0,0.95)"
+   showAnimation="SlideIn_Right"
+   hideAnimation="None"
+   animationDuration="1"
+   allowDragging="true"
+   returnToOriginalPositionWhenReleased="false">
+   <VerticalLayout padding="10 10 0 40" spacing="10">
+      <Text>Navigation</Text>
+      <HorizontalLayout spacing="5">
+         <Button onClick="tryNorth">North</Button>
+         <Button onClick="tryWest">West</Button>
+      </HorizontalLayout>
+      <HorizontalLayout spacing="5">
+        <Button onClick="trySouth">South</Button>
+       <Button onClick="tryEast">East</Button>
+      </HorizontalLayout>
+   </VerticalLayout>
+</Panel>
